@@ -7,12 +7,12 @@
 ----
 
 # 截图
-<image src="./image/1.gif" width="170px"/> <image src="./image/2.gif" width="170px"/>
+<image src="./image/1.gif" width="170px"/>
 
 # 依赖
 * Gradle
 ```groovy
-compile 'com.yanzhenjie:loading:1.0.0'
+compile 'com.yanzhenjie:loading:1.0.1'
 ```
 
 * Maven
@@ -20,24 +20,31 @@ compile 'com.yanzhenjie:loading:1.0.0'
 <dependency>
   <groupId>com.yanzhenjie</groupId>
   <artifactId>loading</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 
 # 使用说明
 
-XML:
+**XML或者Java中**：  
 ```xml
 <com.yanzhenjie.loading.LoadingView
     android:id="@+id/loading_view"
     android:layout_width="150dp"
     android:layout_height="150dp" />
+
+// 或者Java：
+LoadingView loadView = new LoadingView(context);
 ```
 
-其它什么都不用做，它会自动运转起来。
+默认是一个白色的圆，你也可以改变颜色：    
+```java
+LoadingView loadView;
+loadView.setCircleColors(color1, color2, color3);
+```
 
-默认Dialog:
+**使用默认的Dialog**：  
 ```java
 Dialog mWaitDialog = new LoadingDialog(context);
 mWaitDialog.show();

@@ -16,17 +16,6 @@
 -->
 <resources>
 
-    <style name="Dialog" parent="@android:style/Theme.Dialog"/>
-
-    <style name="Dialog.Loading">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:windowSoftInputMode">stateHidden</item>
-    </style>
+    <style name="Dialog" parent="@android:style/Theme.Material.Dialog.NoActionBar"/>
 
 </resources>

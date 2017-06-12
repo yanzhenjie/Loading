@@ -27,7 +27,7 @@ import com.yanzhenjie.loading.R;
 public class LoadingDialog extends Dialog {
 
     public LoadingDialog(Context context) {
-        super(context, R.style.LoadingWaitDialog);
+        super(context, R.style.Dialog_Loading);
         setCancelable(false);
         setCanceledOnTouchOutside(false);
         setContentView(R.layout.loading_wait_dialog);

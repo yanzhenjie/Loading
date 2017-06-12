@@ -27,6 +27,7 @@ import android.widget.ImageView;
 public class LoadingView extends ImageView {
 
     private LoadingDrawable mLoadingDrawable;
+    private LevelLoadingRenderer mLoadingRenderer;
 
     public LoadingView(Context context) {
         super(context);
@@ -35,8 +36,16 @@ public class LoadingView extends ImageView {
     public LoadingView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        mLoadingDrawable = new LoadingDrawable(new LevelLoadingRenderer(context));
+        mLoadingRenderer = new LevelLoadingRenderer(context);
+        mLoadingDrawable = new LoadingDrawable(mLoadingRenderer);
         setImageDrawable(mLoadingDrawable);
+    }
+
+    /**
+     * Set several colors of the circle.
+     */
+    public void setCircleColors(int r1, int r2, int r3) {
+        mLoadingRenderer.setCircleColors(r1, r2, r3);
     }
 
     @Override

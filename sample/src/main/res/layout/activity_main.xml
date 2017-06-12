@@ -48,11 +48,22 @@
             android:text="Dialog"
             android:textAllCaps="false"/>
 
-        <com.yanzhenjie.loading.LoadingView
-            android:id="@+id/loading_view"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <com.yanzhenjie.loading.LoadingView
+                android:id="@+id/loading_view1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <com.yanzhenjie.loading.LoadingView
+                android:id="@+id/loading_view2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+        </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>

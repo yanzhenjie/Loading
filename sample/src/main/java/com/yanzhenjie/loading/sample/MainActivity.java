@@ -16,6 +16,7 @@
 package com.yanzhenjie.loading.sample;
 
 import android.app.Dialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mLoadingView = (LoadingView) findViewById(R.id.loading_view);
+        mLoadingView = (LoadingView) findViewById(R.id.loading_view2);
+        mLoadingView.setCircleColors(Color.parseColor("#5500FF00"), Color.parseColor("#B100FF00"), Color.parseColor("#FF00FF00"));
 
         mWaitDialog = new LoadingDialog(this);
 
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         mBtnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mLoadingView.setVisibility(View.GONE);
                 mWaitDialog.show();
                 mBtnStart.postDelayed(closeDialog, 4000);
             }
@@ -63,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     private Runnable closeDialog = new Runnable() {
         @Override
         public void run() {
-            mLoadingView.setVisibility(View.VISIBLE);
             if (mWaitDialog != null && mWaitDialog.isShowing()) mWaitDialog.dismiss();
         }
     };

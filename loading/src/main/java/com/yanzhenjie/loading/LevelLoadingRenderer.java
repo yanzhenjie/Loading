@@ -120,6 +120,13 @@ public class LevelLoadingRenderer extends LoadingRenderer {
         initStrokeInset((int) mWidth, (int) mHeight);
     }
 
+    /**
+     * Set several colors of the circle.
+     */
+    public void setCircleColors(int r1, int r2, int r3) {
+        mLevelColors = new int[]{r1, r2, r3};
+    }
+
     @Override
     protected void draw(Canvas canvas) {
         int saveCount = canvas.save();
