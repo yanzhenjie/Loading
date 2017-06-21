@@ -12,7 +12,7 @@
 # 依赖
 * Gradle
 ```groovy
-compile 'com.yanzhenjie:loading:1.0.1'
+compile 'com.yanzhenjie:loading:1.0.2'
 ```
 
 * Maven
@@ -20,7 +20,7 @@ compile 'com.yanzhenjie:loading:1.0.1'
 <dependency>
   <groupId>com.yanzhenjie</groupId>
   <artifactId>loading</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -47,6 +47,9 @@ loadView.setCircleColors(color1, color2, color3);
 **使用默认的Dialog**：  
 ```java
 Dialog mWaitDialog = new LoadingDialog(context);
+mWaitDialog.setMessage(R.string.loading_wait);
+// mWaitDialog.setMessage("请求稍等");
+mWaitDialog.setCircleColors(color1, color2, color3);
 mWaitDialog.show();
 ```
 

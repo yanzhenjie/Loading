@@ -20,7 +20,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies.loading
+    //compile rootProject.ext.dependencies.loading
+    compile project(':loading')
     compile rootProject.ext.dependencies.appCompat
     compile rootProject.ext.dependencies.design
 }

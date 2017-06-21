@@ -13,13 +13,13 @@ ext {
             libraryMinSdkVersion: 11,
             sampleMinSdkVersion : 11,
             targetSdkVersion    : 25,
-            versionCode         : 1,
-            versionName         : "1.0"
+            versionCode         : 2,
+            versionName         : "1.1.0"
     ]
 
     maven = [
             // library
-            version       : "1.0.1",
+            version       : "1.0.2",
 
             siteUrl       : 'https://github.com/yanzhenjie/Loading',
             gitUrl        : 'git@github.com:yanzhenjie/Loading.git',
@@ -52,6 +52,6 @@ ext {
     dependencies = [
             appCompat: 'com.android.support:appcompat-v7:25.3.1',
             design   : 'com.android.support:design:25.3.1',
-            loading  : 'com.yanzhenjie:loading:1.0.1'
+            loading  : 'com.yanzhenjie:loading:1.0.2'
     ]
 }

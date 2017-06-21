@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     // dialog.
     private Button mBtnStart;
-    private Dialog mWaitDialog;
+    private LoadingDialog mWaitDialog;
 
     // layout.
     private LoadingView mLoadingView;
@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
         mLoadingView = (LoadingView) findViewById(R.id.loading_view2);
         mLoadingView.setCircleColors(Color.parseColor("#5500FF00"), Color.parseColor("#B100FF00"), Color.parseColor("#FF00FF00"));
 
-        mWaitDialog = new LoadingDialog(this);
+        {
+            mWaitDialog = new LoadingDialog(this);
+            mWaitDialog.setMessage(R.string.loading_message);
+//            mWaitDialog.setCircleColors(color1, color2, color3);
+        }
 
         mBtnStart = (Button) findViewById(R.id.btn_start);
         mBtnStart.setOnClickListener(new View.OnClickListener() {

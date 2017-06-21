@@ -16,4 +16,5 @@
 -->
 <resources>
     <string name="app_name">Loading</string>
+    <string name="loading_message">Please waiting…</string>
 </resources>

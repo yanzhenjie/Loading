@@ -12,7 +12,7 @@ A MaterialDesign style LoadingView. Currently only for my own open source projec
 # Dependencies
 * Gradle
 ```groovy
-compile 'com.yanzhenjie:loading:1.0.1'
+compile 'com.yanzhenjie:loading:1.0.2'
 ```
 
 * Maven
@@ -20,7 +20,7 @@ compile 'com.yanzhenjie:loading:1.0.1'
 <dependency>
   <groupId>com.yanzhenjie</groupId>
   <artifactId>loading</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -49,6 +49,9 @@ It will automatically turn up.
 **Default Dialog**:  
 ```java
 Dialog mWaitDialog = new LoadingDialog(context);
+mWaitDialog.setMessage(R.string.loading_wait);
+// mWaitDialog.setMessage("Please wait...");
+mWaitDialog.setCircleColors(...);
 mWaitDialog.show();
 ```
 
